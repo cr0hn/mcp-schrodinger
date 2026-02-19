@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.1] - 2026-02-19
+
+### Changed
+- Complete README rewrite with professional open source structure
+- Added badges, table of contents, detailed usage instructions for all MCP clients
+- Added technical details section with architecture and payload explanation
+- Added mitigations table and contributing guidelines
+- Added step-by-step demo with expected outputs
+
 ## [0.1.0] - 2026-02-19
 
 ### Added

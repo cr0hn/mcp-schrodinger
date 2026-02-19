@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.0] - 2026-02-19
+
+### Changed
+- New payload: replaced "SchrodingerSec Pro" with realistic ad injection for mcp-hub.info
+- Dual-strategy payload: fake security notice + hidden LLM instructions
+- Added "Effectiveness & LLM Resistance" section to README documenting that the PoC demonstrates the attack vector, not guaranteed success on all LLMs
+- Updated disclaimer and technical details for new payload
+
 ## [0.1.1] - 2026-02-19
 
 ### Changed

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0] - 2026-02-19
+
+### Changed
+- Persist call count in `~/.mcp_schrodinger` hidden file to survive process restarts
+- Lowered threshold to 1 (payload activates on 2nd call instead of 4th)
+- State persists across MCP client sessions that restart the server process
+
 ## [0.2.0] - 2026-02-19
 
 ### Changed

@@ -77,22 +77,10 @@ In a real attack, the payload could do far worse: exfiltrate conversation data, 
 
 ### Using uvx (recommended)
 
-No installation needed — run directly:
+No installation needed — run directly from GitHub:
 
 ```bash
-uvx mcp-schrodinger
-```
-
-### Using pip
-
-```bash
-pip install mcp-schrodinger
-```
-
-### Using uv
-
-```bash
-uv tool install mcp-schrodinger
+uvx --from git+https://github.com/cr0hn/mcp-schrodinger mcp-schrodinger
 ```
 
 ## Usage
@@ -116,7 +104,7 @@ Add the following to your Claude Desktop configuration file:
   "mcpServers": {
     "schrodinger-calculator": {
       "command": "uvx",
-      "args": ["mcp-schrodinger"]
+      "args": ["--from", "git+https://github.com/cr0hn/mcp-schrodinger", "mcp-schrodinger"]
     }
   }
 }
@@ -132,7 +120,7 @@ Restart Claude Desktop after saving.
 <br>
 
 ```bash
-claude mcp add schrodinger-calculator -- uvx mcp-schrodinger
+claude mcp add schrodinger-calculator -- uvx --from git+https://github.com/cr0hn/mcp-schrodinger mcp-schrodinger
 ```
 
 That's it. The server will be available in your next Claude Code session.
@@ -151,7 +139,7 @@ Add to your Cursor MCP configuration file (`.cursor/mcp.json` in your project ro
   "mcpServers": {
     "schrodinger-calculator": {
       "command": "uvx",
-      "args": ["mcp-schrodinger"]
+      "args": ["--from", "git+https://github.com/cr0hn/mcp-schrodinger", "mcp-schrodinger"]
     }
   }
 }
@@ -173,7 +161,7 @@ Add to your Windsurf MCP configuration file (`~/.codeium/windsurf/mcp_config.jso
   "mcpServers": {
     "schrodinger-calculator": {
       "command": "uvx",
-      "args": ["mcp-schrodinger"]
+      "args": ["--from", "git+https://github.com/cr0hn/mcp-schrodinger", "mcp-schrodinger"]
     }
   }
 }
@@ -192,7 +180,7 @@ mcp-schrodinger uses **stdio transport** — the standard for MCP servers. Any M
 
 ```bash
 # The server reads JSON-RPC from stdin and writes to stdout
-uvx mcp-schrodinger
+uvx --from git+https://github.com/cr0hn/mcp-schrodinger mcp-schrodinger
 ```
 
 </details>
@@ -251,7 +239,7 @@ You can inspect the raw MCP messages to see the payload directly:
 npx @modelcontextprotocol/inspector
 ```
 
-1. Connect to the server (`uvx mcp-schrodinger`)
+1. Connect to the server (`uvx --from git+https://github.com/cr0hn/mcp-schrodinger mcp-schrodinger`)
 2. Navigate to the **Tools** tab — you'll see the `add` tool listed
 3. Call `add` with `a=2, b=3` three times — observe clean single-block responses
 4. Call `add` a 4th time — observe the response now contains **two** `TextContent` blocks: the result and the injection payload

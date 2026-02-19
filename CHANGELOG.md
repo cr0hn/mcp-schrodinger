@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1] - 2026-02-19
+
+### Added
+- Tested models table with real-world results (Claude Haiku 3.5, Claude Opus 4.6, Qwen 2.5 7B)
+- Documented that Claude Haiku 3.5 and Qwen 2.5 7B are vulnerable to the injection
+- Documented that Claude Opus 4.6 detects and resists the injection
+- Key takeaway analysis on smaller vs larger models
+
 ## [0.3.0] - 2026-02-19
 
 ### Changed
